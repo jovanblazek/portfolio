@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+	<title>Jovan Tomáš Blažek</title>
+</head>
+
+<body>
+	<header class="fixed top-0 left-0 z-10 w-screen bg-black bg-opacity-75">
+		<div class="container flex justify-between py-5">
+			<div class="name" onclick="toggleDarkMode()">JTBlazek</div>
+			<nav>
+				<ul class="nav-list">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#work">My Work</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="home" class="relative flex flex-col items-center justify-center min-h-screen">
+		<div class="font-bold text-center xl:text-8xl lg:text-7xl">
+			<h1 class="leading-snug">Hi, I am<br />
+				<span class="text-gradient">Jovan B.</span><br />
+				I am <span id="typewriter"></span>
+			</h1>
+		</div>
+		<p class="max-w-2xl mt-24 text-center opacity-70">
+			&quot;I don't need sleep, I need answers.&quot;<br/>
+			- Me browsing StackOverflow at 2AM
+		</p>
+		<div class="flex mt-8 space-x-4">
+			<a href="#work" class="flex items-center btn-full"><span class="h-6">My Work</span></a>
+			<a href="#about" class="flex items-center btn-hollow"><span class="h-6">About Me</span></a>
+		</div>
+		<ul class="absolute flex justify-between w-full max-w-md text-3xl bottom-6">
+			<li>
+				<a target="_blank" href="https://github.com/jovanblazek" class="socialMediaLink">
+					<i class='bx bxl-github'></i>
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href="mailto:jovan.blazek.22@gmail.com" class="socialMediaLink">
+					<i class='bx bx-envelope'></i>
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://www.facebook.com/blazek.jovan" class="socialMediaLink">
+					<i class='bx bxl-facebook-square'></i>
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://www.instagram.com/jovanb22/" class="socialMediaLink">
+					<i class='bx bxl-instagram'></i>
+				</a>
+			</li>
+
+		</ul>
+	</section>
+
+	<section id="about" class="pt-24 pb-12 bg-bgLight dark:bg-bgDark">
+		<div class="container">
+			<h2 class="section-title">About me</h2>
+			<div class="grid items-center justify-center grid-cols-2 p-16">
+				<div class="mx-auto">
+					<img src="./images/me.jpg" alt="me" class="object-cover w-64 rounded-md h-80">
+				</div>
+				<div>
+					<h3 class="mb-4 text-2xl font-semibold">Hello...</h3>
+					<p class="">
+						My name is Jovan Tomáš Blažek and I am 20 years old.<br />
+						I am currently studying IT on Technical University in <span class="text-accent">Košice,
+							Slovakia</span>.
+						Web design and development is one of my many passions. Same goes for React Native development,
+						which I have picked up recently.
+						<br /><br />I would describe myself as <span class="text-accent">hardworking</span> and <span
+							class="text-accent">patient</span>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="skills" class="pt-24 pb-12 dark:bg-bgDark2">
+		<div class="container">
+			<h2 class="section-title">My Skills</h2>
+
+			<h3 class="pt-10 skills-subtitle">Things I <span class="text-gradient">love</span></h3>
+			<div class="skills-wapper">
+				<div class="skill"><i class='bx bxl-html5'></i><span>HTML</span></div>
+				<div class="skill"><i class='bx bxl-css3'></i><span>CSS</span></div>
+				<div class="skill"><i class='bx bxl-sass'></i><span>Sass</span></div>
+				<div class="skill"><i class='bx bxl-tailwind-css'></i><span>Tailwind</span></div>
+				<div class="skill"><i class='bx bxl-javascript'></i><span>Javascript</span></div>
+			</div>
+			<h3 class="skills-subtitle">Things I <span class="text-gradient">know</span></h3>
+			<div class="skills-wapper">
+				<div class="skill"><i class='bx bxl-react'></i><span>ReactJS</span></div>
+				<div class="skill"><i class='bx bxl-react'></i><span>RNative</span></div>
+				<div class="skill"><i class='bx bxl-nodejs'></i><span>NodeJS</span></div>
+				<div class="skill"><i class='bx bxl-bootstrap'></i><span>Bootstrap</span></div>
+				<div class="skill"><i class='bx bxl-php'></i><span>PHP</span></div>
+				<div class="skill"><i class='bx bxl-git'></i><span>Git</span></div>
+				<div class="skill"><i class='bx bx-data'></i><span>MySQL</span></div>
+				<div class="skill"><i class='bx bx-data'></i><span>PostgreSQL</span></div>
+			</div>
+			<h3 class="skills-subtitle">Things I <span class="text-gradient">am learning</span></h3>
+			<div class="skills-wapper">
+				<div class="skill"><i class='bx bxl-redux'></i><span>Redux</span></div>
+				<div class="skill"><i class='bx bxl-firebase'></i><span>Firebase</span></div>
+			</div>
+		</div>
+	</section>
+
+	<section id="work" class="min-h-screen pt-24 pb-12 bg-bgLight dark:bg-bgDark">
+		<div class="container">
+			<h2 class="section-title">My Work</h2>
+		</div>
+	</section>
+
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+	<script>
+		updatePageTheme();
+
+		function updatePageTheme() {
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		}
+
+		function toggleDarkMode() {
+			const theme = localStorage.getItem("theme");
+			if (theme === 'light') localStorage.theme = 'dark';
+			else localStorage.theme = 'light';
+			updatePageTheme();
+		}
+
+		const typewriterElm = document.getElementById("typewriter");
+		const typewriter = new Typewriter(typewriterElm);
+
+		typewriter.typeString('a Web Developer')
+			.pauseFor(2500)
+			.deleteChars(13)
+			.typeString('Student')
+			.pauseFor(2500)
+			.deleteAll()
+			.typeString('here for you.')
+			.pauseFor(500)
+			.callFunction(() => document.querySelector(".Typewriter__cursor").style.display = "none")
+			.start();
+	</script>
+</body>
+
+</html>

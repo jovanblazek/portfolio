@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		@apply font-sans bg-white text-textBlack dark:bg-bgDark dark:text-white;
+	}
+}
+
+@layer components {
+	.text-gradient {
+		background: linear-gradient(285.44deg, #d525e3 8.3%, #4474e4 86.39%);
+		background-clip: border-box;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	
+	.section-title {
+		@apply relative mb-8 text-4xl font-bold text-center;
+	}
+
+	.section-title::after {
+		@apply absolute left-0 right-0 w-20 h-1 mx-auto;
+		content: '';
+		top: 130%;
+		background-image: linear-gradient(285.44deg, #d525e3 8.3%, #4474e4 86.39%);
+	}
+
+	.btn-full {
+		background-image: linear-gradient(285.44deg, #d525e3 8.3%, #4474e4 86.39%);
+		@apply inline-block px-12 py-3 font-bold text-white transition-all rounded-md bg-accent;
+		&:hover
+		{
+			background-image: linear-gradient(285.44deg, #a81db3 8.3%, #244799 86.39%);
+		}
+	}
+
+	.btn-hollow {
+		@apply inline-block px-12 py-3 font-bold transition-all bg-transparent border-2 rounded-md dark:text-white border-accent hover:bg-accent hover:text-white;
+	}
+
+	.skills-subtitle {
+		@apply mt-8 mb-4 text-xl font-medium;
+	}
+
+	.skills-wapper {
+		@apply grid;
+		grid-gap: 1rem;
+		grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+	}
+
+	.skill {
+		@apply flex flex-col items-center justify-center w-32 h-32 p-4 mx-auto space-y-2 border border-gray-500 rounded-md sm:mx-0;
+		> i {
+			@apply text-3xl;
+		}
+	}
+}
+
+.Typewriter__cursor {
+	font-weight: normal;
+}
+
+header {
+	@apply font-semibold text-white;
+	border-bottom: 2px solid rgba(212, 212, 212, 0.089);
+	backdrop-filter: blur(4px);
+}
+
+.nav-list {
+	@apply flex justify-evenly;
+
+	li {
+		@apply ml-6;
+	}
+
+	a {
+		@apply p-2;
+	}
+}
