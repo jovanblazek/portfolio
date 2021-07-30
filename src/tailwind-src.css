@@ -18,29 +18,46 @@
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
-	
+
 	.section-title {
 		@apply relative mb-8 text-4xl font-bold text-center;
 	}
 
 	.section-title::after {
 		@apply absolute left-0 right-0 w-20 h-1 mx-auto;
-		content: '';
+		content: "";
 		top: 130%;
-		background-image: linear-gradient(285.44deg, #d525e3 8.3%, #4474e4 86.39%);
+		background-image: linear-gradient(
+			285.44deg,
+			#d525e3 8.3%,
+			#4474e4 86.39%
+		);
 	}
 
 	.btn-full {
-		background-image: linear-gradient(285.44deg, #d525e3 8.3%, #4474e4 86.39%);
+		background-image: linear-gradient(
+			285.44deg,
+			#d525e3 8.3%,
+			#4474e4 86.39%
+		);
 		@apply inline-block px-12 py-3 font-bold text-white transition-all rounded-md bg-accent;
-		&:hover
-		{
-			background-image: linear-gradient(285.44deg, #a81db3 8.3%, #244799 86.39%);
+		&:hover {
+			background-image: linear-gradient(
+				285.44deg,
+				#a81db3 8.3%,
+				#244799 86.39%
+			);
+		}
+		> span {
+			@apply h-6;
 		}
 	}
 
 	.btn-hollow {
 		@apply inline-block px-12 py-3 font-bold transition-all bg-transparent border-2 rounded-md dark:text-white border-accent hover:bg-accent hover:text-white;
+		> span {
+			@apply h-6;
+		}
 	}
 
 	.skills-subtitle {
@@ -57,6 +74,58 @@
 		@apply flex flex-col items-center justify-center w-32 h-32 p-4 mx-auto space-y-2 border border-gray-500 rounded-md sm:mx-0;
 		> i {
 			@apply text-3xl;
+		}
+	}
+
+	.project {
+		@apply grid p-8 mb-16 border rounded-md border-textBlack dark:border-white;
+		grid-template-columns: 1fr 30%;
+		grid-gap: 2rem;
+
+		&:nth-child(even) {
+			grid-template-columns: 30% 1fr;
+			.project-image-wrapper {
+				@apply col-start-2;
+			}
+			.project-info {
+				@apply col-start-1 row-start-1;
+			}
+		}
+
+		img {
+			@apply w-full rounded-md;
+		}
+
+		.project-info {
+			@apply flex flex-col p-4 pb-0;
+		}
+
+		.project-name {
+			@apply relative mb-10 text-4xl font-semibold;
+			&::after {
+				@apply absolute left-0 right-0 w-20 h-1;
+				content: "";
+				top: 130%;
+				background-image: linear-gradient(
+					285.44deg,
+					#d525e3 8.3%,
+					#4474e4 86.39%
+				);
+			}
+		}
+
+		p {
+			@apply mb-4;
+		}
+
+		.project-technology {
+			@apply text-4xl;
+			h5 {
+				@apply mb-2 text-base font-semibold;
+			}
+			> div {
+				@apply mb-2;
+			}
 		}
 	}
 }
@@ -77,8 +146,24 @@ header {
 	li {
 		@apply ml-6;
 	}
+}
 
-	a {
-		@apply p-2;
+.nav-link {
+	@apply relative p-2 transition-all;
+	&:hover::after {
+		@apply absolute left-0 w-full top-9 bg-accent;
+		content: "";
+		height: 2px;
+		background-image: linear-gradient(
+			285.44deg,
+			#d525e3 8.3%,
+			#4474e4 86.39%
+		);
+	}
+	&.active::after {
+		@apply absolute left-0 w-full bg-textBlack dark:bg-white top-9;
+		content: "";
+		height: 2px;
+		background-image: none;
 	}
 }

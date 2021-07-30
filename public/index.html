@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
 	<meta charset="UTF-8">
@@ -17,16 +17,17 @@
 </head>
 
 <body>
-	<header class="fixed top-0 left-0 z-10 w-screen bg-black bg-opacity-75">
+	<header
+		class="fixed top-0 left-0 z-10 w-screen bg-black bg-opacity-20 text-textBlack dark:text-white dark:bg-opacity-75">
 		<div class="container flex justify-between py-5">
 			<div class="name" onclick="toggleDarkMode()">JTBlazek</div>
 			<nav>
 				<ul class="nav-list">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#work">My Work</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#home" class="nav-link active">Home</a></li>
+					<li><a href="#about" class="nav-link">About Me</a></li>
+					<li><a href="#skills" class="nav-link">Skills</a></li>
+					<li><a href="#work" class="nav-link">My Work</a></li>
+					<li><a href="#contact" class="nav-link">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -40,12 +41,12 @@
 			</h1>
 		</div>
 		<p class="max-w-2xl mt-24 text-center opacity-70">
-			&quot;I don't need sleep, I need answers.&quot;<br/>
+			&quot;I don't need sleep, I need answers.&quot;<br />
 			- Me browsing StackOverflow at 2AM
 		</p>
 		<div class="flex mt-8 space-x-4">
-			<a href="#work" class="flex items-center btn-full"><span class="h-6">My Work</span></a>
-			<a href="#about" class="flex items-center btn-hollow"><span class="h-6">About Me</span></a>
+			<a href="#work" class="flex items-center btn-full"><span>My Work</span></a>
+			<a href="#about" class="flex items-center btn-hollow"><span>About Me</span></a>
 		</div>
 		<ul class="absolute flex justify-between w-full max-w-md text-3xl bottom-6">
 			<li>
@@ -95,7 +96,7 @@
 		</div>
 	</section>
 
-	<section id="skills" class="pt-24 pb-12 dark:bg-bgDark2">
+	<section id="skills" class="pt-24 pb-16 dark:bg-bgDark2">
 		<div class="container">
 			<h2 class="section-title">My Skills</h2>
 
@@ -126,46 +127,125 @@
 		</div>
 	</section>
 
-	<section id="work" class="min-h-screen pt-24 pb-12 bg-bgLight dark:bg-bgDark">
+	<section id="work" class="pt-24 pb-12 bg-bgLight dark:bg-bgDark">
 		<div class="container">
 			<h2 class="section-title">My Work</h2>
+		</div>
+		<div class="container py-10">
+			<div class="project">
+				<div class="project-image-wrapper">
+					<img src="./images/elitehub1.png" alt="elitehub">
+				</div>
+				<div class="project-info">
+					<h3 class="project-name">EliteHUB</h3>
+					<p>Fullstack hobby project, which purpose is to serve as wiki with guides for players of game Elite
+						Dangerous.</p>
+					<div class="project-technology">
+						<div>
+							<h5>Website</h5>
+							<i class='bx bxl-php'></i>
+							<i class='bx bxl-javascript'></i>
+							<i class='bx bx-data'></i>
+							<i class='bx bxl-sass'></i>
+							<i class='bx bxl-bootstrap'></i>
+						</div>
+						<div>
+							<h5>Admin & Backend</h5>
+							<i class='bx bxl-react'></i>
+							<i class='bx bxl-nodejs'></i>
+							<i class='bx bxl-tailwind-css'></i>
+						</div>
+
+					</div>
+					<div class="flex mt-auto space-x-4">
+						<a href="https://elitehub.eu/" target="_blank" class="flex items-center btn-full">
+							<span>Demo</span>
+						</a>
+						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project-image-wrapper">
+					<img src="./images/mars1.png" alt="game" class="border dark:border-gray-900">
+				</div>
+				<div class="project-info">
+					<h3 class="project-name">React Game</h3>
+					<p>Turn based strategy game built with React and Firebase. My friend did the coding, I did the
+						UI/UX. <br />Won 2nd place in high school web dev competition.</p>
+					<div class="project-technology">
+						<div>
+							<h5>Tech used</h5>
+							<i class='bx bxl-react'></i>
+							<i class='bx bxl-firebase'></i>
+							<i class='bx bxl-sass'></i>
+						</div>
+					</div>
+					<div class="flex mt-auto space-x-4">
+						<a href="https://colonizema.rs/" target="_blank" class="flex items-center btn-full">
+							<span>Demo</span>
+						</a>
+						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project-image-wrapper">
+					<img src="./images/elitehub1.png" alt="movie database">
+				</div>
+				<div class="project-info">
+					<h3 class="project-name">Movie Database</h3>
+					<p>Fullstack PHP and MySQL movie database with users, movies and reviews. Built for school project
+						back in high school.</p>
+					<div class="project-technology">
+						<div>
+							<h5>Tech used</h5>
+							<i class='bx bxl-php'></i>
+							<i class='bx bxl-css3'></i>
+							<i class='bx bx-data'></i>
+						</div>
+
+					</div>
+					<div class="flex mt-auto space-x-4">
+						<a href="#" target="_blank" class="flex items-center btn-full">
+							<span>Source</span>
+						</a>
+						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project-image-wrapper">
+					<img src="./images/hotel1.png" alt="hotel">
+				</div>
+				<div class="project-info">
+					<h3 class="project-name">Small Hotel</h3>
+					<p>My first ever complex site, also a high school project. Static and responsive with pleasing
+						desing.</p>
+					<div class="project-technology">
+						<div>
+							<h5>Tech used</h5>
+							<i class='bx bxl-html5'></i>
+							<i class='bx bxl-css3'></i>
+							<i class='bx bxl-javascript'></i>
+						</div>
+
+					</div>
+					<div class="flex mt-auto space-x-4">
+						<a href="#" target="_blank" class="flex items-center btn-full">
+							<span>Demo</span>
+						</a>
+						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-	<script>
-		updatePageTheme();
-
-		function updatePageTheme() {
-			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-			if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-				document.documentElement.classList.add('dark')
-			} else {
-				document.documentElement.classList.remove('dark')
-			}
-		}
-
-		function toggleDarkMode() {
-			const theme = localStorage.getItem("theme");
-			if (theme === 'light') localStorage.theme = 'dark';
-			else localStorage.theme = 'light';
-			updatePageTheme();
-		}
-
-		const typewriterElm = document.getElementById("typewriter");
-		const typewriter = new Typewriter(typewriterElm);
-
-		typewriter.typeString('a Web Developer')
-			.pauseFor(2500)
-			.deleteChars(13)
-			.typeString('Student')
-			.pauseFor(2500)
-			.deleteAll()
-			.typeString('here for you.')
-			.pauseFor(500)
-			.callFunction(() => document.querySelector(".Typewriter__cursor").style.display = "none")
-			.start();
-	</script>
+	<script src="./scripts/themeManager.js"></script>
+	<script src="./scripts/typewriter.js"></script>
+	<script src="./scripts/scrollSpy.js"></script>
 </body>
 
 </html>
