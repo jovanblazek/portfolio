@@ -19,8 +19,10 @@
 <body>
 	<header
 		class="fixed top-0 left-0 z-10 w-screen bg-black bg-opacity-20 text-textBlack dark:text-white dark:bg-opacity-75">
-		<div class="container flex justify-between py-5">
-			<div class="name" onclick="toggleDarkMode()">JTBlazek</div>
+		<div class="flex justify-between px-5 py-5 md:container">
+			<div class="flex items-center space-x-6">
+				JTBlazek
+			</div>
 			<nav>
 				<ul class="nav-list">
 					<li><a href="#home" class="nav-link active">Home</a></li>
@@ -34,7 +36,7 @@
 	</header>
 
 	<section id="home" class="relative flex flex-col items-center justify-center min-h-screen">
-		<div class="font-bold text-center xl:text-8xl lg:text-7xl">
+		<div class="text-3xl font-bold text-center sm:text-5xl md:text-6xl xl:text-8xl lg:text-7xl">
 			<h1 class="leading-snug">Hi, I am<br />
 				<span class="text-gradient">Jovan B.</span><br />
 				I am <span id="typewriter"></span>
@@ -44,11 +46,11 @@
 			&quot;I don't need sleep, I need answers.&quot;<br />
 			- Me browsing StackOverflow at 2AM
 		</p>
-		<div class="flex mt-8 space-x-4">
+		<div class="flex flex-col mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row">
 			<a href="#work" class="flex items-center btn-full"><span>My Work</span></a>
 			<a href="#about" class="flex items-center btn-hollow"><span>About Me</span></a>
 		</div>
-		<ul class="absolute flex justify-between w-full max-w-md text-3xl bottom-6">
+		<ul class="absolute flex items-center justify-between w-full max-w-md text-3xl bottom-6">
 			<li>
 				<a target="_blank" href="https://github.com/jovanblazek" class="socialMediaLink">
 					<i class='bx bxl-github'></i>
@@ -58,6 +60,12 @@
 				<a target="_blank" href="mailto:jovan.blazek.22@gmail.com" class="socialMediaLink">
 					<i class='bx bx-envelope'></i>
 				</a>
+			</li>
+			<li>
+				<label class="flex items-center justify-center darkMode-toggle w-7 h-7">
+					<input type="checkbox" onchange="toggleDarkMode()">
+					<div></div>
+				</label>
 			</li>
 			<li>
 				<a target="_blank" href="https://www.facebook.com/blazek.jovan" class="socialMediaLink">
@@ -76,17 +84,17 @@
 	<section id="about" class="pt-24 pb-12 bg-bgLight dark:bg-bgDark">
 		<div class="container">
 			<h2 class="section-title">About me</h2>
-			<div class="grid items-center justify-center grid-cols-2 p-16">
+			<div class="grid items-center justify-center grid-cols-1 py-12 md:py-16 md:grid-cols-2 lg:p-16">
 				<div class="mx-auto">
 					<img src="./images/me.jpg" alt="me" class="object-cover w-64 rounded-md h-80">
 				</div>
-				<div>
+				<div class="px-4 mt-10 sm:px-16 md:mt-0 md:px-0">
 					<h3 class="mb-4 text-2xl font-semibold">Hello...</h3>
-					<p class="">
+					<p>
 						My name is Jovan Tomáš Blažek and I am 20 years old.<br />
-						I am currently studying IT on Technical University in <span class="text-accent">Košice,
+						I am currently studying IT at Technical University in <span class="text-accent">Košice,
 							Slovakia</span>.
-						Web design and development is one of my many passions. Same goes for React Native development,
+						Web design and development is one of my many hobbies. Same goes for React Native development,
 						which I have picked up recently.
 						<br /><br />I would describe myself as <span class="text-accent">hardworking</span> and <span
 							class="text-accent">patient</span>.
@@ -127,7 +135,7 @@
 		</div>
 	</section>
 
-	<section id="work" class="pt-24 pb-12 bg-bgLight dark:bg-bgDark">
+	<section id="work" class="pt-24 bg-bgLight dark:bg-bgDark">
 		<div class="container">
 			<h2 class="section-title">My Work</h2>
 		</div>
@@ -157,7 +165,7 @@
 						</div>
 
 					</div>
-					<div class="flex mt-auto space-x-4">
+					<div class="project-buttons">
 						<a href="https://elitehub.eu/" target="_blank" class="flex items-center btn-full">
 							<span>Demo</span>
 						</a>
@@ -181,7 +189,7 @@
 							<i class='bx bxl-sass'></i>
 						</div>
 					</div>
-					<div class="flex mt-auto space-x-4">
+					<div class="project-buttons">
 						<a href="https://colonizema.rs/" target="_blank" class="flex items-center btn-full">
 							<span>Demo</span>
 						</a>
@@ -206,7 +214,7 @@
 						</div>
 
 					</div>
-					<div class="flex mt-auto space-x-4">
+					<div class="project-buttons">
 						<a href="#" target="_blank" class="flex items-center btn-full">
 							<span>Source</span>
 						</a>
@@ -231,13 +239,40 @@
 						</div>
 
 					</div>
-					<div class="flex mt-auto space-x-4">
+					<div class="project-buttons">
 						<a href="#" target="_blank" class="flex items-center btn-full">
 							<span>Demo</span>
 						</a>
 						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="py-24 dark:bg-bgDark2">
+		<div class="container">
+			<h2 class="section-title">Contact</h2>
+			<div class="flex flex-col items-center mt-16 space-y-8">
+				<ul class="flex items-center justify-between space-x-8 text-3xl">
+					<li>
+						<a target="_blank" href="https://github.com/jovanblazek" class="socialMediaLink">
+							<i class='bx bxl-github'></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.facebook.com/blazek.jovan" class="socialMediaLink">
+							<i class='bx bxl-facebook-square'></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.instagram.com/jovanb22/" class="socialMediaLink">
+							<i class='bx bxl-instagram'></i>
+						</a>
+					</li>
+				</ul>
+				<a target="_blank" href="mailto:jovan.blazek.22@gmail.com"
+					class="flex items-center btn-hollow w-max"><span>Email me!</span></a>
 			</div>
 		</div>
 	</section>

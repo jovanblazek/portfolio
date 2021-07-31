@@ -26,7 +26,7 @@
 	.section-title::after {
 		@apply absolute left-0 right-0 w-20 h-1 mx-auto;
 		content: "";
-		top: 130%;
+		top: calc(100% + 11px);
 		background-image: linear-gradient(
 			285.44deg,
 			#d525e3 8.3%,
@@ -61,7 +61,7 @@
 	}
 
 	.skills-subtitle {
-		@apply mt-8 mb-4 text-xl font-medium;
+		@apply mt-10 mb-6 text-xl font-medium text-center sm:mt-8 sm:mb-4 sm:text-left;
 	}
 
 	.skills-wapper {
@@ -97,15 +97,15 @@
 		}
 
 		.project-info {
-			@apply flex flex-col p-4 pb-0;
+			@apply flex flex-col md:px-4 xl:pb-0 xl:p-4;
 		}
 
 		.project-name {
-			@apply relative mb-10 text-4xl font-semibold;
+			@apply relative mb-10 text-3xl font-semibold sm:text-4xl;
 			&::after {
 				@apply absolute left-0 right-0 w-20 h-1;
 				content: "";
-				top: 130%;
+				top: calc(100% + 11px);
 				background-image: linear-gradient(
 					285.44deg,
 					#d525e3 8.3%,
@@ -119,12 +119,21 @@
 		}
 
 		.project-technology {
-			@apply text-4xl;
+			@apply mb-8 text-4xl xl:mb-0;
 			h5 {
-				@apply mb-2 text-base font-semibold;
+				@apply mb-2 text-lg font-semibold xl:text-base;
 			}
 			> div {
 				@apply mb-2;
+			}
+		}
+
+		.project-buttons {
+			@apply flex flex-col mt-auto space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row;
+
+			.btn-full,
+			.btn-hollow {
+				@apply justify-center;
 			}
 		}
 	}
@@ -165,5 +174,88 @@ header {
 		content: "";
 		height: 2px;
 		background-image: none;
+	}
+}
+
+/* https://codepen.io/aaroniker/pen/KGpXZo */
+.darkMode-toggle {
+	cursor: pointer;
+	input {
+		display: none;
+		& + div {
+			border-radius: 50%;
+			width: 22px;
+			height: 22px;
+			position: relative;
+			box-shadow: inset 8px -8px 0 0 #fff;
+			transform: scale(1) rotate(-2deg);
+			transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
+			&:before {
+				content: "";
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: background 0.3s ease;
+			}
+			&:after {
+				content: "";
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				margin: -2px 0 0 -2px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				box-shadow: 0 -10px 0 #0e2431, 0 10px 0 #0e2431,
+					9px 5px 0 #0e2431, -9px 5px 0 #0e2431, 9px -5px 0 #0e2431,
+					-9px -5px 0 #0e2431;
+				transform: scale(0);
+				transition: all 0.3s ease;
+			}
+		}
+		&:checked + div {
+			box-shadow: inset 16px -16px 0 0 #fff;
+			transform: scale(0.8) rotate(0deg);
+			transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s,
+				width 0.3s ease 0.1s, height 0.3s ease 0.1s;
+			width: 18px;
+			height: 18px;
+			&:before {
+				background: #0e2431;
+				transition: background 0.3s ease 0.1s;
+			}
+			&:after {
+				transform: scale(1.5);
+			}
+		}
+	}
+}
+
+@media (max-width: 1280px) {
+	.project {
+		grid-template-columns: 1fr;
+
+		&:nth-child(even) {
+			grid-template-columns: 1fr;
+			.project-image-wrapper {
+				@apply col-start-1;
+			}
+			.project-info {
+				@apply col-start-1 row-start-2;
+			}
+		}
+	}
+}
+
+@media (max-width: 447px) {
+	.skill:nth-child(odd) {
+		margin-right: 0;
+	}
+
+	.skill:nth-child(even) {
+		margin-left: 0;
 	}
 }
