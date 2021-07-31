@@ -18,10 +18,16 @@
 
 <body>
 	<header
-		class="fixed top-0 left-0 z-10 w-screen bg-black bg-opacity-20 text-textBlack dark:text-white dark:bg-opacity-75">
-		<div class="flex justify-between px-5 py-5 md:container">
-			<div class="flex items-center space-x-6">
+		class="fixed top-0 left-0 z-10 w-full bg-black bg-opacity-20 text-textBlack dark:text-white dark:bg-opacity-75">
+		<div class="grid justify-between px-5 py-5 md:container header-container justify-items-end">
+			<div class="justify-self-start">
 				JTBlazek
+			</div>
+			<div class="nav-hamburger sm:hidden" onclick="toggleNav()">
+				<span class="dark:bg-white"></span>
+				<span class="dark:bg-white"></span>
+				<span class="dark:bg-white"></span>
+				<span class="dark:bg-white"></span>
 			</div>
 			<nav>
 				<ul class="nav-list">
@@ -50,15 +56,15 @@
 			<a href="#work" class="flex items-center btn-full"><span>My Work</span></a>
 			<a href="#about" class="flex items-center btn-hollow"><span>About Me</span></a>
 		</div>
-		<ul class="absolute flex items-center justify-between w-full max-w-md text-3xl bottom-6">
+		<ul class="absolute flex items-center justify-around w-full max-w-xs text-3xl sm:max-w-md bottom-6">
 			<li>
 				<a target="_blank" href="https://github.com/jovanblazek" class="socialMediaLink">
 					<i class='bx bxl-github'></i>
 				</a>
 			</li>
-			<li>
-				<a target="_blank" href="mailto:jovan.blazek.22@gmail.com" class="socialMediaLink">
-					<i class='bx bx-envelope'></i>
+			<li class="hidden sm:list-item">
+				<a target="_blank" href="https://www.instagram.com/jovanb22/" class="socialMediaLink">
+					<i class='bx bxl-instagram'></i>
 				</a>
 			</li>
 			<li>
@@ -68,16 +74,15 @@
 				</label>
 			</li>
 			<li>
+				<a target="_blank" href="mailto:jovan.blazek.22@gmail.com" class="socialMediaLink">
+					<i class='bx bx-envelope'></i>
+				</a>
+			</li>
+			<li class="hidden sm:list-item">
 				<a target="_blank" href="https://www.facebook.com/blazek.jovan" class="socialMediaLink">
 					<i class='bx bxl-facebook-square'></i>
 				</a>
 			</li>
-			<li>
-				<a target="_blank" href="https://www.instagram.com/jovanb22/" class="socialMediaLink">
-					<i class='bx bxl-instagram'></i>
-				</a>
-			</li>
-
 		</ul>
 	</section>
 
@@ -142,7 +147,7 @@
 		<div class="container py-10">
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/elitehub1.png" alt="elitehub">
+					<img src="./images/elitehub1.jpg" alt="elitehub">
 				</div>
 				<div class="project-info">
 					<h3 class="project-name">EliteHUB</h3>
@@ -175,7 +180,7 @@
 			</div>
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/mars1.png" alt="game" class="border dark:border-gray-900">
+					<img src="./images/mars1.jpg" alt="game" class="border dark:border-gray-900">
 				</div>
 				<div class="project-info">
 					<h3 class="project-name">React Game</h3>
@@ -199,7 +204,7 @@
 			</div>
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/elitehub1.png" alt="movie database">
+					<img src="./images/elitehub1.jpg" alt="movie database">
 				</div>
 				<div class="project-info">
 					<h3 class="project-name">Movie Database</h3>
@@ -224,7 +229,7 @@
 			</div>
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/hotel1.png" alt="hotel">
+					<img src="./images/hotel1.jpg" alt="hotel">
 				</div>
 				<div class="project-info">
 					<h3 class="project-name">Small Hotel</h3>
@@ -281,6 +286,7 @@
 	<script src="./scripts/themeManager.js"></script>
 	<script src="./scripts/typewriter.js"></script>
 	<script src="./scripts/scrollSpy.js"></script>
+	<script src="./scripts/navbar.js"></script>
 </body>
 
 </html>
