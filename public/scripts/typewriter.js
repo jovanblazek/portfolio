@@ -1,7 +1,8 @@
 const typewriterElm = document.getElementById("typewriter");
 const typewriter = new Typewriter(typewriterElm);
 
-typewriter.typeString('a Web Developer')
+typewriter.pauseFor(200)
+    .typeString('a Web Developer')
     .pauseFor(2500)
     .deleteChars(13)
     .typeString('Student')

@@ -7,7 +7,7 @@
 		scroll-behavior: smooth;
 	}
 	body {
-		@apply font-sans bg-white text-textBlack dark:bg-bgDark dark:text-white;
+		@apply font-sans bg-white text-textBlack dark:bg-bgDark dark:text-gray-100;
 	}
 }
 
@@ -78,7 +78,7 @@
 	}
 
 	.project {
-		@apply grid p-8 mb-16 border rounded-md border-textBlack dark:border-white;
+		@apply grid p-8 mb-16 border rounded-md border-textBlack dark:border-gray-500;
 		grid-template-columns: 1fr 30%;
 		grid-gap: 2rem;
 
