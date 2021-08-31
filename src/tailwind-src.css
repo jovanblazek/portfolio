@@ -323,3 +323,15 @@ header {
 		margin-left: 0;
 	}
 }
+
+@media (max-height: 550px) and (orientation: landscape) {
+	.hero-buttons {
+		@apply mb-24;
+	}
+}
+
+@media (max-height: 360px) and (orientation: landscape) {
+	.nav-list {
+		@apply mt-0;
+	}
+}
