@@ -78,19 +78,9 @@
 	}
 
 	.project {
-		@apply grid p-8 mb-16 border rounded-md border-textBlack dark:border-gray-500;
+		@apply grid p-4 mb-16 border rounded-md sm:p-8 border-textBlack dark:border-gray-500;
 		grid-template-columns: 1fr 30%;
 		grid-gap: 2rem;
-
-		&:nth-child(even) {
-			grid-template-columns: 30% 1fr;
-			.project-image-wrapper {
-				@apply col-start-2;
-			}
-			.project-info {
-				@apply col-start-1 row-start-1;
-			}
-		}
 
 		img {
 			@apply w-full rounded-md;
@@ -137,6 +127,16 @@
 			}
 		}
 	}
+
+	.project:nth-child(even) {
+		grid-template-columns: 30% 1fr;
+		.project-image-wrapper {
+			@apply col-start-2;
+		}
+		.project-info {
+			@apply col-start-1 row-start-1;
+		}
+	}
 }
 
 .Typewriter__cursor {
@@ -154,7 +154,7 @@ header {
 }
 
 .nav-list {
-	@apply flex flex-col p-6 text-right justify-evenly sm:p-0 sm:flex-row sm:text-left sm:space-x-6;
+	@apply flex flex-col py-6 pl-6 mt-5 text-right justify-evenly sm:p-0 sm:mt-0 sm:flex-row sm:text-left sm:space-x-6;
 }
 
 .nav-link {
