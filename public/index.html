@@ -14,21 +14,42 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="animate.css" />
 
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+	<link rel="manifest" href="./images/icons/site.webmanifest">
+	<link rel="mask-icon" href="./images/icons/safari-pinned-tab.svg" color="#4474e4">
+	<link rel="shortcut icon" href="./images/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="./images/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="title" content="Jovan Tomáš Blažek">
+	<meta name="description"
+		content="Jovan Tomas Blazek - React front-end developer and student from Kosice, Slovakia. Contact me.">
+	<meta name="keywords"
+		content="jovan blazek, jovan blažek, jovan, blažek, portfolio, front end, front end developer, tuke student, react developer">
+
+	<meta property="og:url" content="https://jtblazek.sk">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Jovan Tomáš Blažek">
+	<meta property="og:description" content="React front-end developer, student from Slovakia">
+	<meta property="og:image" content="https://jtblazek.sk/images/opengraph.png">
+
 	<title>Jovan Tomáš Blažek</title>
 </head>
 
 <body>
-	<header
-		class="fixed top-0 left-0 z-10 w-full bg-black bg-opacity-20 text-textBlack dark:text-white dark:bg-opacity-75">
+	<header class="fixed top-0 left-0 z-10 w-full bg-white bg-opacity-75 text-textBlack dark:text-white dark:bg-black">
 		<div class="grid justify-between px-5 py-5 md:container header-container justify-items-end">
 			<div class="justify-self-start">
-				<a href="#">JTBlazek</a>
+				<a href="#"><span class="text-gradient">JTBlazek</span></a>
 			</div>
 			<div class="nav-hamburger sm:hidden" onclick="toggleNav()">
-				<span class="dark:bg-white"></span>
-				<span class="dark:bg-white"></span>
-				<span class="dark:bg-white"></span>
-				<span class="dark:bg-white"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 			<nav>
 				<ul class="nav-list">
@@ -55,12 +76,13 @@
 		</p>
 		<div class="flex flex-col mt-8 mb-16 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row wow fadeInUp hero-buttons">
 			<a href="#work" class="flex items-center btn-full"><span>My Work</span></a>
-			<a href="#about" class="flex items-center btn-hollow"><span>About Me</span></a>
+			<a href="#contact" class="flex items-center btn-hollow"><span>Contact</span></a>
 		</div>
 		<ul class="absolute flex items-center justify-around w-full max-w-xs text-3xl sm:max-w-md bottom-6 wow fadeInUp"
 			data-wow-delay="0.2s">
 			<li>
-				<a target="_blank" href="https://github.com/jovanblazek" class="socialMediaLink">
+				<a target="_blank" href="https://github.com/jovanblazek" rel="noreferrer nofollow"
+					class="socialMediaLink">
 					<i class='bx bxl-github'></i>
 				</a>
 			</li>
@@ -71,8 +93,9 @@
 				</label>
 			</li>
 			<li>
-				<a target="_blank" href="mailto:jovan.blazek.22@gmail.com" class="socialMediaLink">
-					<i class='bx bx-envelope'></i>
+				<a target="_blank" href="www.linkedin.com/in/jtblazek" rel="noreferrer nofollow"
+					class="socialMediaLink">
+					<i class='bx bxl-linkedin-square'></i>
 				</a>
 			</li>
 		</ul>
@@ -88,7 +111,7 @@
 				<div class="px-4 mt-10 sm:px-16 md:mt-0 md:px-0">
 					<h3 class="mb-4 text-2xl font-semibold">Hello...</h3>
 					<p class="text-sm sm:text-base">
-						My name is Jovan Tomáš Blažek and I am 20 years old.<br />
+						My name is Jovan Tomáš Blažek and I am 21 years old.<br />
 						I am currently studying IT at Technical University in <span class="text-accent">Košice,
 							Slovakia</span>.
 						Web design and development is one of my many hobbies. Same goes for React Native development,
@@ -154,7 +177,7 @@
 		<div class="container py-10">
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/elitehub1.jpg" alt="elitehub">
+					<img src="./images/elitehub.jpg" alt="Elitehub web">
 				</div>
 				<div class="project-info">
 					<h3 class="project-name">EliteHUB</h3>
@@ -181,13 +204,12 @@
 						<a href="https://elitehub.eu/" target="_blank" class="flex items-center btn-full">
 							<span>Demo</span>
 						</a>
-						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
 					</div>
 				</div>
 			</div>
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/mars1.jpg" alt="game" class="border dark:border-gray-900">
+					<img src="./images/mars.jpg" alt="Strategy react game" class="border dark:border-gray-900">
 				</div>
 				<div class="project-info">
 					<h3 class="project-name">React Game</h3>
@@ -205,38 +227,40 @@
 						<a href="https://colonizema.rs/" target="_blank" class="flex items-center btn-full">
 							<span>Demo</span>
 						</a>
-						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
 					</div>
 				</div>
 			</div>
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/elitehub1.jpg" alt="movie database">
+					<img src="./images/bot.jpg" alt="Discord bot">
 				</div>
 				<div class="project-info">
-					<h3 class="project-name">Movie Database</h3>
-					<p>Fullstack PHP and MySQL movie database with users, movies and reviews. Built for school project
-						back in high school.</p>
+					<h3 class="project-name">Discord Bot</h3>
+					<p>
+						Public javascript discord bot made with NodeJS. Bot is used to retrieve game information and
+						stats from
+						several APIs.
+					</p>
 					<div class="project-technology">
 						<div>
 							<h5>Tech used</h5>
-							<i class='bx bxl-php'></i>
-							<i class='bx bxl-css3'></i>
-							<i class='bx bx-data'></i>
+							<i class='bx bxl-nodejs'></i>
+							<i class='bx bxl-discord'></i>
 						</div>
 
 					</div>
 					<div class="project-buttons">
-						<a href="#" target="_blank" class="flex items-center btn-full">
+						<a href="https://github.com/jovanblazek/elitehub-bot" target="_blank"
+							class="flex items-center btn-full">
 							<span>Source</span>
 						</a>
-						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
+						<a href="https://discord.gg/a7Zsx6a" class="flex items-center btn-hollow"><span>More</span></a>
 					</div>
 				</div>
 			</div>
 			<div class="project">
 				<div class="project-image-wrapper">
-					<img src="./images/hotel1.jpg" alt="hotel">
+					<img src="./images/hotel.jpg" alt="Hotel web">
 				</div>
 				<div class="project-info">
 					<h3 class="project-name">Small Hotel</h3>
@@ -252,33 +276,38 @@
 
 					</div>
 					<div class="project-buttons">
-						<a href="#" target="_blank" class="flex items-center btn-full">
+						<a href="https://jovanblazek.github.io/hotel-liptov" target="_blank"
+							class="flex items-center btn-full">
 							<span>Demo</span>
 						</a>
-						<a href="#" class="flex items-center btn-hollow"><span>More</span></a>
+						<a href="https://github.com/jovanblazek/hotel-liptov"
+							class="flex items-center btn-hollow"><span>More</span></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="contact" class="relative py-24 dark:bg-bgDark2">
+	<section id="contact" class="relative pt-24 dark:bg-bgDark2">
 		<div class="container">
 			<h2 class="section-title">Contact</h2>
 			<div class="flex flex-col items-center mt-16 space-y-8">
 				<ul class="flex items-center justify-between space-x-8 text-3xl wow fadeInUp" data-wow-delay="0.1s">
 					<li>
-						<a target="_blank" href="https://github.com/jovanblazek" class="socialMediaLink">
+						<a target="_blank" href="https://github.com/jovanblazek" rel="noreferrer nofollow"
+							class="socialMediaLink">
 							<i class='bx bxl-github'></i>
 						</a>
 					</li>
 					<li>
-						<a target="_blank" href="https://www.facebook.com/blazek.jovan" class="socialMediaLink">
-							<i class='bx bxl-facebook-square'></i>
+						<a target="_blank" href="www.linkedin.com/in/jtblazek" rel="noreferrer nofollow"
+							class="socialMediaLink">
+							<i class='bx bxl-linkedin-square'></i>
 						</a>
 					</li>
 					<li>
-						<a target="_blank" href="https://www.instagram.com/jovanb22/" class="socialMediaLink">
+						<a target="_blank" href="https://www.instagram.com/jovanb22/" rel="noreferrer nofollow"
+							class="socialMediaLink">
 							<i class='bx bxl-instagram'></i>
 						</a>
 					</li>
@@ -287,12 +316,13 @@
 					class="flex items-center btn-hollow w-max wow fadeInUp" data-wow-delay="0.2s"><span>Email
 						me!</span></a>
 			</div>
-			<p class="absolute left-0 right-0 text-center bottom-6 dark:text-gray-400">
-				&copy;2021 Blažek
-			</p>
 		</div>
-
 	</section>
+
+	<footer class="pt-12 pb-24 text-center dark:text-gray-400 dark:bg-bgDark2 leading-relaxed">
+		<p class="wow fadeInUp">Built with Tailwind</p>
+		<p class="wow fadeInUp">&copy; 2021 Blažek</p>
+	</footer>
 
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 	<script src="./scripts/themeManager.js"></script>
