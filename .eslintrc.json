@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "@sudolabs-io/eslint-config-sudolabs/typescript-react",
+    "@sudolabs-io/eslint-config-sudolabs/with/prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "enum",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["PascalCase"],
+        "prefix": ["is", "has", "do", "does", "are"]
+      },
+      {
+        "selector": "variable",
+        "modifiers": ["const", "global", "exported"],
+        "types": ["boolean", "string", "number"],
+        "format": ["UPPER_CASE"]
+      }
+    ],
+    "react/function-component-definition": "off",
+    "no-restricted-exports": "off"
+  },
+  "reportUnusedDisableDirectives": true
+}
