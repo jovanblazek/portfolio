@@ -1,6 +1,6 @@
-/* eslint-disable react/button-has-type */
 import ReactFullpage from '@fullpage/react-fullpage'
 import type { NextPage } from 'next'
+import { Introduction } from 'components/Introduction'
 
 const Home: NextPage = () => {
   return (
@@ -10,15 +10,12 @@ const Home: NextPage = () => {
       scrollingSpeed={1000} /* Options here */
       scrollOverflow
       render={({ state, fullpageApi }) => {
-        console.log(state)
+        // console.log(state)
 
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <p>Section 1 (welcome to fullpage.js)</p>
-              <button onClick={() => fullpageApi.moveSectionDown()}>
-                Click me to move down
-              </button>
+              <Introduction />
             </div>
             <div className="section">
               <p>Section 2</p>
