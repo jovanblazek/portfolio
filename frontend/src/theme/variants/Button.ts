@@ -4,43 +4,29 @@ export const Button: ComponentSingleStyleConfig = {
   baseStyle: {
     transition: 'all 0.3s',
     w: '100%',
-    color: 'white',
-    _disabled: {
-      backgroundColor: 'cc.grayLight',
-      opacity: 1,
-    },
-    _hover: {
-      _disabled: {
-        backgroundColor: 'cc.grayLight',
-      },
-    },
+    color: 'cc.primaryDark',
     _focus: {
       outline: 'none',
       boxShadow: 'none',
     },
   },
   variants: {
-    primary: {
-      backgroundColor: 'cc.primary',
-      color: 'cc.grayDark',
+    accent: {
+      backgroundColor: 'cc.accent',
+      color: 'white',
     },
-    primaryOutlined: {
+    accentOutlined: {
       backgroundColor: 'transparent',
-      borderColor: 'cc.primary',
+      borderColor: 'cc.accent',
       borderWidth: '2px',
     },
-    primaryOutlinedActive: {
-      backgroundColor: 'cc.primary',
-      color: 'cc.grayDark',
-      borderColor: 'cc.primary',
-      borderWidth: '2px',
-    },
-    blue: {
-      backgroundColor: 'blue',
+    primary: {
+      backgroundColor: 'cc.primaryDark',
+      color: 'white',
     },
   },
   defaultProps: {
     size: 'md',
-    variant: 'primary',
+    variant: 'accent',
   },
 }

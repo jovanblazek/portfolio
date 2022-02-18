@@ -1,17 +1,16 @@
 import ReactFullpage from '@fullpage/react-fullpage'
 import type { NextPage } from 'next'
 import { Introduction } from 'components/Introduction'
+// import sanityClient from 'utils/sanityClient'
+
+// TODO add particles to background https://particles.js.org/docs/index.html and the use dark color pallete
 
 const Home: NextPage = () => {
   return (
     <ReactFullpage
-      // fullpage options
-      licenseKey="YOUR_KEY_HERE"
-      scrollingSpeed={1000} /* Options here */
+      scrollingSpeed={1000}
       scrollOverflow
-      render={({ state, fullpageApi }) => {
-        // console.log(state)
-
+      render={() => {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
@@ -66,5 +65,15 @@ const Home: NextPage = () => {
     />
   )
 }
+
+// export async function getStaticProps() {
+//   const projects = await sanityClient.fetch(`*[_type == "project"]`)
+
+//   return {
+//     props: {
+//       projects,
+//     },
+//   }
+// }
 
 export default Home

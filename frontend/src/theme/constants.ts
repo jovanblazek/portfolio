@@ -10,13 +10,10 @@ export const Breakpoints = {
 }
 
 export const CustomColors = {
-  background: '#171E2E',
-  grayDark: '#212121',
-  gray: '#313742',
-  grayLight: '#4B5663',
-  primary: '#00FFA4',
-  primaryLight: '#162532',
-  gallery: '#EEEEEE',
+  background: '#F1F6F9',
+  accent: '#14274E',
+  primaryDark: '#394867',
+  primaryLight: '#9BA4B4',
 }
 
 export const Colors = {
@@ -25,7 +22,7 @@ export const Colors = {
   black: '#000',
 }
 
-export const TEXT_COLOR = Colors.white
+export const TEXT_COLOR = Colors.primaryDark
 export const BASE_FONT_SIZE_PX = '16px'
 export const NAVBAR_HEIGHT_PX = '60px'
 

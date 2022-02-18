@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Icon, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Icon, Image, Text } from '@chakra-ui/react'
 import { Github, Linkedin } from 'lucide-react'
 
 export const Introduction = () => {
@@ -16,9 +16,9 @@ export const Introduction = () => {
           width="36"
           height="36"
           objectFit="cover"
-          objectPosition="right"
           borderRadius="full"
-          src="https://images.unsplash.com/photo-1517101724602-c257fe568157?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29ja2F0aWVsfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          src="/fotka_okno_crop.jpg"
+          alt="Jovan Blažek"
         />
         <Text fontSize="2xl" textAlign="center">
           Jovan Blažek
@@ -27,6 +27,7 @@ export const Introduction = () => {
           <Icon as={Github} fontSize="2xl" />
           <Icon as={Linkedin} fontSize="2xl" />
         </Flex>
+        <Button>My Work</Button>
       </Flex>
     </Box>
   )
